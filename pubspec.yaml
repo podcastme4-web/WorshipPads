@@ -1,0 +1,85 @@
+name: worship_pads
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+14
+
+environment:
+  sdk: ^3.13.0
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  flutter_soloud: ^4.1.6
+  google_mobile_ads: ^9.1.0 
+  connectivity_plus: ^6.0.3
+  path_provider: ^2.1.2
+  webview_flutter: ^4.7.0
+  audio_session: ^0.1.20
+  wakelock_plus: ^1.2.10
+  record: ^6.0.0
+  share_plus: ^10.1.2
+  msix: ^3.16.7
+
+  
+dev_dependencies:
+  flutter_test:
+   sdk: flutter
+   
+  flutter_launcher_icons: "^0.13.1"
+  flutter_lints: ^6.0.0
+  flutter_native_splash: ^2.4.7
+
+
+
+flutter:
+  uses-material-design: true
+  config:
+    enable-swift-package-manager: false
+
+  assets:
+    - assets/icons/
+    - assets/audio/analog/major/
+    - assets/audio/analog/minor/
+    - assets/audio/synth/major/
+    - assets/audio/synth/minor/
+    - assets/audio/drums/loops/
+    - assets/audio/drums/kit/
+
+flutter_launcher_icons:
+  image_path: "assets/icons/iconss1.png"
+  android: true
+  ios: true
+
+msix_config:
+  display_name: "Worship Pads by Peter Juniors"
+  publisher_display_name: "Peter Junior's International Music Academy"
+  publisher: "CN=E3EE0576-31F8-496D-88E4-E6B0D55E0D8A"
+  identity_name: PeterJuniorsInternational.WorshipPadsbyPeterJunior
+  msix_version: 1.0.0.0
+  logo_path: assets/icons/iconss1.png
+  capabilities: internetClient
